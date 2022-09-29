@@ -15,12 +15,12 @@ def get_items():
     global items
     return "\n".join(items)
 
-@app.get("/redos/<user_regex>")
-def redos(user_regex):
-    global items
-    # regex = re.compile(request.form.get('user_regex'))
-    regex = re.compile(user_regex)
-    return [s for s in items if regex.match(s)]
+# @app.get("/redos/<user_regex>")
+# def redos(user_regex):
+#     global items
+#     # regex = re.compile(request.form.get('user_regex'))
+#     regex = re.compile(user_regex)
+#     return [s for s in items if regex.match(s)]
 
 @app.get("/redos2")
 def redos2():
